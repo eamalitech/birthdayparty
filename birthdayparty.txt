@@ -1,0 +1,36 @@
+$ git branch
+* master
+  moma
+  whitney
+$ git branch -D moma
+Deleted branch moma (was 978e5a1).
+$ git branch -D whitney
+Deleted branch whitney (was 9b384f9).
+$ git branch unordered-list
+$ git checkout unordered-list
+Switched to branch 'unordered-list'
+$ git add "index.html"
+$ git commit -m "index"
+[unordered-list ba89063] index
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+$ git checkout master
+Switched to branch 'master'
+$ git merge unordered-list
+Updating 1481f5a..ba89063
+Fast-forward
+ index.html | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+$ git branch big-heading 
+$ git checkout big-heading
+Switched to branch 'big-heading'
+$ git add "index.html"
+$ git commit -m "index2"
+[big-heading f7513af] index2
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+$ git checkout master
+Switched to branch 'master'
+$ git merge big-heading 
+Updating ba89063..f7513af
+Fast-forward
+ index.html | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
